@@ -1,8 +1,5 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header";
-import { NextIntlClientProvider } from "next-intl"; // Импортируйте провайдер
-import { useTranslations } from "next-intl"; // Импортируйте useTranslations, если нужно
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,17 +19,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <NextIntlClientProvider locale="en">
-      {" "}
-      {/* Укажите локаль по умолчанию */}
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <Header /> {/* Включите заголовок */}
-          {children}
-        </body>
-      </html>
-    </NextIntlClientProvider>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
+    </html>
   );
 }

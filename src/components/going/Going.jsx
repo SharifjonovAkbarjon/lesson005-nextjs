@@ -1,13 +1,14 @@
+import Image from "next/image";
 import React from "react";
-import img from "@/assets/blog.png"; // Correctly importing the image
+import img from "@/imags/going.png";
+import { Input } from "postcss";
 import { GoSearch } from "react-icons/go";
-
-const Blog = () => {
+const Going = () => {
   return (
-    <div className="  bg-white">
-      <div className="flex justify-between mx-auto container">
-        <div className="w-[600px] flex items-center justify-center  mx-auto">
-          <img src={img.src} alt="Blog" className="w-full h-auto" />{" "}
+    <div className="container mx-auto mt-[60px] mb-[40px]">
+      <div className="flex justify-between">
+        <div>
+          <Image className=" " src={img} alt="" width={817} height={500} />
         </div>
         <div className="p-[20px]">
           <div className="w-[311px] h-[58px] border rounded-[4px] flex items-center">
@@ -50,4 +51,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Going;
